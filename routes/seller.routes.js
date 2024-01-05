@@ -41,7 +41,6 @@ router.put("/seller/edit/:id", (req, res) => {
     return res.status(404).send({ message: "Seller does not exist." });
   }
 
-  // edit seller
   const newSellerList = sellerList.map((item, index, self) => {
     if (item.id === sellerIdToBeEdited) {
       return { ...item, ...newValues };
